@@ -1,0 +1,97 @@
+.Destination {
+  border: 4px solid var(--debug-yellow);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  text-align: center;
+}
+
+.Destination h1 {
+  font-size: 56px;
+  font-family: 'Bellefair', serif;
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+
+.Destination h2 {
+  font-size: 1rem;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: lighter;
+  color: var(--ligth);
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+}
+
+.Destination h2 span {
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.destinationText {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: lighter;
+  color: #d0d6f9;
+  line-height: 25px;
+  border: 2px solid var(--debug-red);
+  height: 90px;
+}
+
+.imageWrapper {
+  border: 2px solid var(--debug-yellow);
+}
+
+.imagePh {
+  width: 10rem;
+  height: 10rem;
+  background-color: silver;
+  border-radius: 50%;
+}
+
+.Nav {
+  border: 2px solid var(--debug-red);
+  /* width: 100%; */
+}
+
+.Nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  border: 2px solid var(--debug-yellow);
+}
+
+.Nav ul li {
+  border: 1px solid var(--debug-blue);
+  text-transform: uppercase;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.9rem;
+}
+
+.Hr {
+  width: 100%;
+  border: 1px solid #979797;
+}
+
+.avgDistance,
+.estTravelTime {
+  border: 2px solid var(--debug-red);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.infoTitle {
+  font-size: 14px;
+  font-family: 'Barlow Condensed', sans-serif;
+  letter-spacing: 2.36px;
+  font-weight: lighter;
+  color: #d0d6f9;
+}
+
+.infoData {
+  font-size: 28px;
+  text-transform: uppercase;
+  font-family: 'Bellefair', serif;
+}
