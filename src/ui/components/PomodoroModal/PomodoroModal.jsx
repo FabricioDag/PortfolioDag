@@ -11,7 +11,7 @@ const PomodoroModal = ({ isOpen, onClose, children }) => {
       <div className={style.modalWrapper} onClick={(e) => e.stopPropagation()}>
         <div className={style.modalTop}>
           <h3 className={style.modalTitle}>{t('settings')}</h3>
-          <button onClick={onClose}>X</button>
+          <button className={style.closeModalButton} onClick={onClose}>X</button>
         </div>
 
         <div className={style.modalChildren}>{children}</div>

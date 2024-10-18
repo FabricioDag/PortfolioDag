@@ -29,7 +29,7 @@ function App() {
 
   // Recupera o idioma do localStorage, ou usa 'en' como padrão
   const [language, setLanguage] = useState(
-    localStorage.getItem('language') || 'English'
+    localStorage.getItem('language') || 'en'
   );
 
   // Atualiza o localStorage sempre que o idioma for alterado

@@ -117,11 +117,15 @@ a {
 .weatherPh,
 .clockPh,
 .notifPh,
-.pageTitlePh {
+.pageTitle {
   border: 2px solid var(--debug-yellow);
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.pageTitle{
+  font-size: 2rem;
 }
 
 /* ------------------ APP ICON DEPRECATED ----------------------- */

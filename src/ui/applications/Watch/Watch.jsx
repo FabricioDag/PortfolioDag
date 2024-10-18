@@ -1,4 +1,5 @@
 import './Watch.css';
+import style from './Watch.module.css'
 import { useState, useEffect } from 'react';
 
 const Watch = () => {
@@ -38,15 +39,15 @@ const Watch = () => {
   };
 
   return (
-    <div className="watch application">
-      <p className="timer">{formatTime(time)}</p>
-      <div className="timerButtons">
-        <button onClick={startStop} className="startStopButton">
+    <div className={`${style.Watch} application`}>
+      <p className={style.timer}>{formatTime(time)}</p>
+      <div className={style.timerButtons}>
+        <button onClick={startStop} className={style.startStopButton}>
           {isRunning ? (
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 320 512"
-              className="icon"
+              className={style.icon}
             >
               <path
                 fill="currentColor"
@@ -57,7 +58,7 @@ const Watch = () => {
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 384 512"
-              className="icon"
+              className={style.icon}
             >
               <path
                 fill="currentColor"
@@ -67,13 +68,13 @@ const Watch = () => {
           )}
         </button>
         <button
-          className={isRunning ? 'resetButton' : 'resetButton active'}
+          className={isRunning ? style.resetButton :  `${style.resetButton} ${style.active}`}
           onClick={reset}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 384 512"
-            className="icon"
+            className={style.icon}
           >
             <path
               fill="currentcolor"

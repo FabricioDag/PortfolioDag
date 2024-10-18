@@ -1,4 +1,4 @@
-import './Spacetourism.css';
+import style from './Spacetourism.module.css'
 import { useState, useEffect } from 'react';
 
 import { Header } from './components';
@@ -25,11 +25,11 @@ const Spacetourism = () => {
   }, []);
 
   return (
-    <div className="spacetourism applicationF">
-      {loading ? (
-        <div className="splash-screen">
-          <div className="logo">🚀</div>
-          <h1 className="app-title">Meu App</h1>
+    <div className={`${style.Spacetourism} application`}>
+       {loading ? (
+        <div className={style.splashScreen}>
+          <div className={style.logo}>🚀</div>
+          <h1 className={style.appTitle}>Space Tourism SplashScreen</h1>
         </div>
       ) : (
         <>
@@ -37,6 +37,10 @@ const Spacetourism = () => {
           {pages[openedPage]}
         </>
       )}
+
+      {/* <Header setOpenedPage={setOpenedPage} />
+      {pages[openedPage]} */}
+
     </div>
   );
 };

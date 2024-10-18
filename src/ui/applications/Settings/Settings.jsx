@@ -1,14 +1,14 @@
 import { useState, useContext } from 'react';
-import './Settings.css';
+import style from './Settings.module.css'
 import { SettingsModal } from '../../components';
 
 import { LanguageContext } from '../../contexts/LanguageContext/LanguageContext';
 
 const Settings = ({
   setTheme,
-  changeLanguage,
-  setBackground,
-  setTimestamp,
+  // changeLanguage,
+  // setBackground,
+  // setTimestamp,
   setOpenedApp,
 }) => {
   const { t, setLanguage } = useContext(LanguageContext);
@@ -17,10 +17,10 @@ const Settings = ({
   const [activeArray, setActiveArray] = useState([]);
   const [activeFunction, setActiveFunction] = useState(null);
 
-  const [selectedBackground, setSelectedBackground] = useState('Clean');
-  const [selectedLanguage, setSelectedLanguage] = useState('en');
-  const [selectedTimestamp, setSelectedTimestamp] = useState('00');
-  const [selectedTheme, setSelectedTheme] = useState('Standard');
+  // const [selectedBackground, setSelectedBackground] = useState('Clean');
+  // const [selectedLanguage, setSelectedLanguage] = useState('en');
+  // const [selectedTimestamp, setSelectedTimestamp] = useState('00');
+  // const [selectedTheme, setSelectedTheme] = useState('Standard');
 
   const Backgrounds = ['Clean', 'Stamped'];
   const Themes = ['Dark', 'Standard', 'Light'];
@@ -38,23 +38,23 @@ const Settings = ({
       case 'changeLanguage':
         setActiveFunction(() => setLanguage);
         break;
-      case 'setBackground':
-        setActiveFunction(() => setBackground);
-        break;
-      case 'setTimestamp':
-        setActiveFunction(() => setTimestamp);
-        break;
+      // case 'setBackground':
+      //   setActiveFunction(() => setBackground);
+      //   break;
+      // case 'setTimestamp':
+      //   setActiveFunction(() => setTimestamp);
+      //   break;
     }
   };
 
   return (
-    <div className="Settings application">
+    <div className={`${style.Settings} application`}>
       <h1>{t('settings')}</h1>
 
-      <div className="settingsWrapper">
-        <div className="settingOption" onClick={() => setOpenedApp('About')}>
-          <div className="settingText">
-            <p className="settingTitle">{t('about')}</p>
+      <div className={style.settingsWrapper}>
+        <div className={style.settingOption} onClick={() => setOpenedApp('About')}>
+          <div className={style.settingText}>
+            <p className={style.settingTitle}>{t('about')}</p>
           </div>
           <hr />
         </div>
@@ -71,12 +71,12 @@ const Settings = ({
         </div> */}
 
         <div
-          className="settingOption"
+          className={style.settingOption}
           onClick={() => handleOpenModal(Languages, 'changeLanguage')}
         >
-          <div className="settingText">
-            <p className="settingTitle">{t('language')}</p>
-            <small className="settingActual">{t('actualLanguage')}</small>
+          <div className={style.settingText}>
+            <p className={style.settingTitle}>{t('language')}</p>
+            <small className={style.settingActual}>{t('actualLanguage')}</small>
           </div>
           <hr />
         </div>
@@ -93,18 +93,18 @@ const Settings = ({
         </div> */}
 
         <div
-          className="settingOption"
+          className={style.settingOption}
           onClick={() => handleOpenModal(Themes, 'setTheme')}
         >
-          <div className="settingText">
-            <p className="settingTitle">{t('theme')}</p>
+          <div className={style.settingText}>
+            <p className={style.settingTitle}>{t('theme')}</p>
             {/* <small className="settingActual">{selectedTheme}</small> */}
           </div>
           <hr />
         </div>
       </div>
 
-      <h2>Feedback</h2>
+      <h2 className={style.feedbackButton}>{t('feedback')}</h2>
 
       <SettingsModal
         isOpen={isModalOpen}

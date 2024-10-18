@@ -118,7 +118,7 @@ const Home = ({ setOpenedApp }) => {
                   />
                 </svg>
               </div>
-              <p className="appTitle">pog</p>
+              <p className="appTitle">{t('watch')}</p>
             </div>
 
             <div
@@ -137,7 +137,7 @@ const Home = ({ setOpenedApp }) => {
                   />
                 </svg>
               </div>
-              <p className="appTitle">calc</p>
+              <p className="appTitle">{t('calculator')}</p>
             </div>
 
             <div className="appWrapper" onClick={() => handleClick('Settings')}>
@@ -153,7 +153,7 @@ const Home = ({ setOpenedApp }) => {
                   />
                 </svg>
               </div>
-              <p className="appTitle">set</p>
+              <p className="appTitle">{t('settings')}</p>
             </div>
 
             <div className="appWrapper">
@@ -224,7 +224,8 @@ const Home = ({ setOpenedApp }) => {
           </div>
 
           <div className="carrouselSlide">
-            <div className="pageTitlePh h1 w3">{t('projects')}</div>
+
+            <div className="pageTitle h1 w3">{t('projects')}</div>
 
             <div
               className="appWrapper"
@@ -380,7 +381,7 @@ const Home = ({ setOpenedApp }) => {
           </div>
 
           <div className="carrouselSlide">
-            <div className="pageTitlePh h1 w3">{t('competencies')}</div>
+            <div className="pageTitle h1 w3">{t('competencies')}</div>
 
             <div className="appWrapper">
               <div className="appIcon">
@@ -437,6 +438,7 @@ const Home = ({ setOpenedApp }) => {
                   height="86"
                   viewBox="0 0 83 86"
                   xmlns="http://www.w3.org/2000/svg"
+                  className='icon'
                 >
                   <path
                     fill="currentcolor"
@@ -450,6 +452,7 @@ const Home = ({ setOpenedApp }) => {
             <div className="appWrapper">
               <div className="appIcon">
                 <svg
+                className='icon'
                   width="83"
                   height="86"
                   viewBox="0 0 83 86"
@@ -516,8 +519,10 @@ const Home = ({ setOpenedApp }) => {
             </div>
 
             <div className="appWrapper">
-              <div className="appIcon"></div>
-              <p className="appTitle">Postgree</p>
+              <div className="appIcon">
+              <svg className='icon' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill='currentColor' d="M356.9 64.3H280l-56 88.6-48-88.6H0L224 448 448 64.3h-91.1zm-301.2 32h53.8L224 294.5 338.4 96.3h53.8L224 384.5 55.7 96.3z"/></svg>
+              </div>
+              <p className="appTitle">Vue JS</p>
             </div>
 
             <div className="appWrapper">
@@ -554,7 +559,7 @@ const Home = ({ setOpenedApp }) => {
           </div>
 
           <div className="carrouselSlide">
-            <div className="pageTitlePh h1 w3">Em breve!</div>
+            <div className="pageTitle h1 w3">Em breve!</div>
             {/* ESTA AQUI ATÉ RESOLVER O NUMERO DE PAGINAÇÃO */}
           </div>
         </div>

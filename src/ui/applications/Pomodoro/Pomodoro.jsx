@@ -1,9 +1,12 @@
 import style from './Pomodoro.module.css';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef,useContext } from 'react';
+import { LanguageContext } from '../../contexts/LanguageContext/LanguageContext';
 
 import { PomodoroModal } from '../../components';
 
 const Pomodoro = () => {
+  const { t } = useContext(LanguageContext);
+
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const [workTime, setWorkTime] = useState(
@@ -111,15 +114,15 @@ const Pomodoro = () => {
 
   // Função para aplicar os valores ao clicar no botão "Apply"
   const applySettings = () => {
-    alert('chegou em apply');
+    alert('Applied ');
     setWorkTime(Number(workTimeRef.current.value) * 60);
-    alert('worktime ' + Number(workTimeRef.current.value) * 60);
+    // alert('worktime ' + Number(workTimeRef.current.value) * 60);
 
     setShortBreakTime(Number(shortBreakTimeRef.current.value) * 60);
-    alert('sBreak ' + Number(shortBreakTimeRef.current.value) * 60);
+    // alert('sBreak ' + Number(shortBreakTimeRef.current.value) * 60);
 
     setLongBreakTime(Number(longBreakTimeRef.current.value) * 60);
-    alert('lBreak ' + Number(longBreakTimeRef.current.value) * 60);
+    // alert('lBreak ' + Number(longBreakTimeRef.current.value) * 60);
 
     setCyclesBeforeLongBreak(Number(cyclesBeforeLongBreakRef.current.value));
     resetTimer(); // Reseta o timer com os novos valores
@@ -142,10 +145,10 @@ const Pomodoro = () => {
             Pomodoro
           </p>
           <p className={`${currentTimer == 'shortBreak' ? style.actual : ''}`}>
-            Short Break
+           {t('shortBreak')}
           </p>
           <p className={`${currentTimer == 'longBreak' ? style.actual : ''}`}>
-            Long Break
+            {t('longBreak')}
           </p>
         </div>
       </div>
@@ -183,7 +186,7 @@ const Pomodoro = () => {
       {/* ---------------- INICIO MODAL ----------------- */}
 
       <PomodoroModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-        <p>TIME (MINUTES)</p>
+        <p>{t('time')}</p>
 
         <div className={style.inputWrapper}>
           <label htmlFor="pomodoroInput">Pomodoro</label>
@@ -191,7 +194,7 @@ const Pomodoro = () => {
         </div>
 
         <div className={style.inputWrapper}>
-          <label htmlFor="pomodoroInput">Short Break</label>
+          <label htmlFor="pomodoroInput">{t('shortBreak')}</label>
           <input
             type="number"
             defaultValue={shortBreakTime / 60}
@@ -200,7 +203,7 @@ const Pomodoro = () => {
         </div>
 
         <div className={style.inputWrapper}>
-          <label htmlFor="pomodoroInput">Long Break</label>
+          <label htmlFor="pomodoroInput">{t('longBreak')}</label>
           <input
             type="number"
             defaultValue={longBreakTime / 60}
@@ -209,7 +212,7 @@ const Pomodoro = () => {
         </div>
 
         <div className={style.inputWrapper}>
-          <label htmlFor="pomodoroInput">Cycles before Long Break</label>
+          <label htmlFor="pomodoroInput">{t('cyclesToLongBreak')}</label>
           <input
             type="number"
             defaultValue={cyclesBeforeLongBreak}
@@ -218,7 +221,7 @@ const Pomodoro = () => {
         </div>
 
         <button className={style.applyButton} onClick={applySettings}>
-          Apply
+          {t('apply')}
         </button>
       </PomodoroModal>
     </div>

@@ -28,6 +28,11 @@ const translations = {
     themeLight: 'Light',
     feedback: 'Feedback',
     actualLanguage: 'English',
+    shortBreak:'Short Break',
+    longBreak:'Long Break',
+    cyclesToLongBreak:'Cycles to long break',
+    apply:'Apply',
+    time:'Time (Minutes)',
   },
   pt: {
     acronym: 'pt-br',
@@ -59,6 +64,11 @@ const translations = {
     themeLight: 'Claro',
     feedback: 'Feedback',
     actualLanguage: 'Português',
+    shortBreak:'Pausa Curta',
+    longBreak:'Pausa Longa',
+    cyclesToLongBreak:'Ciclos até Pausa Longa',
+    apply:'Aplicar',
+    time:'Tempo (Minutos)',
   },
   es: {
     acronym: 'es',
@@ -88,6 +98,11 @@ const translations = {
     themeLight: 'Light',
     feedback: 'Feedback',
     actualLanguage: 'Espanõl',
+    shortBreak:'Pausa Curta',
+    longBreak:'Pausa Longa',
+    cyclesToLongBreak:'Cycles to long break',
+    apply:'Aplicar',
+    time:'Tiempo (Minutes)',
   },
 };
 
