@@ -4,6 +4,7 @@
   flex-direction: column;
 
   /* background-image: url(./bgHome.jpeg);
+  
   background-position: center;
   background-size: cover; */
 
@@ -61,4 +62,48 @@
 .appIcon .icon {
   color: var(--app-icon);
   height: 60%;
+}
+.appIcon {
+  width: 80px;
+  height: 80px;
+  background-color: var(--bg-icon-app);
+  border-radius: 0.4rem;
+  filter: drop-shadow(0px 4px 0px var(--sd-icon-app));
+  cursor: pointer;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+/* --------------------- Telas Menores -------------- */
+@media (max-height:760px) {
+  .App{
+    background-color: var(--debug-red);
+  }
+  .appTitle{
+    display: none;
+  }
+}
+
+@media (max-height:900px) {
+  .App{
+    background-color: var(--debug-green);
+  }
+
+  .appIcon {
+    width: 60px;
+    height: 60px;
+    background-color: var(--bg-icon-app);
+    border-radius: 0.4rem;
+    filter: drop-shadow(0px 4px 0px var(--sd-icon-app));
+    cursor: pointer;
+    transition: 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
 }

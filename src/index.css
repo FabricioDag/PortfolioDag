@@ -10,7 +10,8 @@
   --main-text: white;
 
   --bg-desktop: #ffffff;
-  --bg-os: #6a54f5;
+  /* --bg-os: #6a54f5; */
+  --bg-os:#131B39;
   --bg-icon-app: #491fc0;
   --sd-icon-app: #22066f;
 
@@ -149,18 +150,7 @@ a {
   gap: 0.5rem;
 }
 
-.appIcon {
-  width: 80px;
-  height: 80px;
-  background-color: var(--bg-icon-app);
-  border-radius: 0.4rem;
-  filter: drop-shadow(0px 4px 0px var(--sd-icon-app));
-  cursor: pointer;
-  transition: 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
 
 .appIcon:hover {
   transform: translateY(4px);

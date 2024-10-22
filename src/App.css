@@ -145,6 +145,34 @@
   background-color: transparent;
 }
 
+/* CONTINUA COM  MENOS DE 600PX DE LARGURA E MENOS DE 900PX DE ALTURA --- FULL SCREEN MOBILE PEQUENO sem titulos icones menores*/
+
+@media (max-width: 600px) and (max-height: 900px) {
+  .App {
+    background-color: gray;
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+
+/* MAIS DE 600PX DE LARGURA E MENOS DE 900PX DE ALTURA --- MOSTRA CELULAR PEQUENO sem titulos icones menores*/
+@media (min-width: 600px) and (max-height: 900px) {
+  .cellphone {
+    background-color: black;
+    border-radius: 0.8rem;
+    padding: 0.8rem;
+  }
+
+  .App {
+    width: 350px;
+    height: 700px;
+  }
+}
+
+
+/* MAIS DE 600 PX LARGURA e MAIS DE 900 PX DE ALTURA  ---- MOSTRA CEULAR GRANDE com titulo icones grandes*/
+
 @media (min-width: 600px) {
   .Cellphone {
     padding: 0.8rem;
@@ -170,5 +198,15 @@
     border-radius: 0 0 1rem 1rem;
 
     border: 1px solid var(--debug-red);
+    z-index: 1000;
+  }
+}
+
+/* --------------------- Telas Menores Altura -------------- */
+@media (max-height:900px) {
+  .App {
+    width: 343px;
+    height: 700px;
+    border-radius: 1.8rem;
   }
 }

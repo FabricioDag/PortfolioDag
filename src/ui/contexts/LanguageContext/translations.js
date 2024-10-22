@@ -72,7 +72,7 @@ const translations = {
   },
   es: {
     acronym: 'es',
-    notificationCall: '',
+    notificationCall: 'Eae dudinha',
     notificationMessage: '',
     notification: '',
     notificationConfirm: '',
