@@ -81,7 +81,7 @@
 /* --------------------- Telas Menores -------------- */
 @media (max-height:760px) {
   .App{
-    background-color: var(--debug-red);
+    /* background-color: var(--debug-red); */
   }
   .appTitle{
     display: none;
@@ -90,7 +90,7 @@
 
 @media (max-height:900px) {
   .App{
-    background-color: var(--debug-green);
+    /* background-color: var(--debug-green); */
   }
 
   .appIcon {
