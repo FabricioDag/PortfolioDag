@@ -17,6 +17,7 @@
   .settingOption {
     border: 2px solid var(--debug-green);
     padding: 1rem;
+    cursor: pointer;
   }
   
   .settingText {
@@ -25,3 +26,11 @@
     justify-content: space-between;
   }
   
+  .feedbackButton{
+    cursor: pointer;
+    transition: .2s ease;
+  }
+
+  .feedbackButton:hover{
+    color: gray;
+  }

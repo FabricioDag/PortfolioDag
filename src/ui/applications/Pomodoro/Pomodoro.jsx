@@ -54,6 +54,10 @@ const Pomodoro = () => {
     }`;
   };
 
+  useEffect(() => {
+    resetTimer(); // Reseta o timer sempre que qualquer um desses valores for alterado
+  }, [workTime, shortBreakTime, longBreakTime, currentTimer]);
+
   // Reseta o timer
   const resetTimer = () => {
     setIsTimerRunning(false);
@@ -89,7 +93,7 @@ const Pomodoro = () => {
     if (isTimerRunning && time > 0) {
       interval = setInterval(() => {
         setTime(time - 1);
-      }, 1);
+      }, 1000);
 
       // ciclo termina dps de um intervalo
     } else if (time === 0) {
@@ -114,18 +118,39 @@ const Pomodoro = () => {
 
   // Função para aplicar os valores ao clicar no botão "Apply"
   const applySettings = () => {
+    
+    //inicializar as variaveis // tem formas melhores de fazer isso
+    let newWorkTime = 0
+    let newShortBreakTime = 0
+    let newLongBreakTime = 0
+    let newCyclesBeforeLongBreak = 0
+
+    // Validar se Input nao foi negativo
+    if(Number(workTimeRef.current.value)>0){
+       newWorkTime = Number(workTimeRef.current.value) * 60;
+    } else alert('Insira um Work Time acima de 1 minuto')
+
+    if(Number(shortBreakTimeRef.current.value)>0){
+       newShortBreakTime = Number(shortBreakTimeRef.current.value) * 60;
+    } else alert('Insira um Short Break Time acima de 1 minuto')
+    
+    if(Number(longBreakTimeRef.current.value)>0){
+       newLongBreakTime = Number(longBreakTimeRef.current.value) * 60;
+    } else alert('Insira um Long Break Time acima de 1 minuto')
+    
+    if(Number(cyclesBeforeLongBreakRef.current.value)>0){
+       newCyclesBeforeLongBreak = Number(cyclesBeforeLongBreakRef.current.value);
+    } else alert('Insira pelo menos um ciclo')
+    
+
+    // Atualizar os estados de uma só vez
+    setWorkTime(newWorkTime);
+    setShortBreakTime(newShortBreakTime);
+    setLongBreakTime(newLongBreakTime);
+    setCyclesBeforeLongBreak(newCyclesBeforeLongBreak);
+
     alert('Applied ');
-    setWorkTime(Number(workTimeRef.current.value) * 60);
-    // alert('worktime ' + Number(workTimeRef.current.value) * 60);
 
-    setShortBreakTime(Number(shortBreakTimeRef.current.value) * 60);
-    // alert('sBreak ' + Number(shortBreakTimeRef.current.value) * 60);
-
-    setLongBreakTime(Number(longBreakTimeRef.current.value) * 60);
-    // alert('lBreak ' + Number(longBreakTimeRef.current.value) * 60);
-
-    setCyclesBeforeLongBreak(Number(cyclesBeforeLongBreakRef.current.value));
-    resetTimer(); // Reseta o timer com os novos valores
   };
 
   const handleOpenModal = () => {

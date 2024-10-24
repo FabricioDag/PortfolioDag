@@ -18,7 +18,7 @@ const Header = ({ setOpenedPage }) => {
   };
   return (
     <div className={style.Header}>
-      <img className={style.logo} src={logo} alt="" />
+      <img  className={style.logo} src={logo} alt=""onClick={() => handleClick('Home')}/>
       <button className={style.hamburguerBtn} onClick={handleClickNav}>
         <img src={navActive ? closeIcon : hamburguerIcon} alt="" />
       </button>
