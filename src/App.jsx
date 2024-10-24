@@ -1,4 +1,5 @@
 import { useState, useEffect, useContext } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 import './App.css';
 
@@ -75,6 +76,16 @@ function App() {
     Pomodoro: <Pomodoro />,
   };
 
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(false);
+    }, 3500); // Simulação do tempo de carregamento
+
+    return () => clearTimeout(timer); // Limpeza do timer quando o componente for desmontado
+  }, []); // Sem dependências para rodar apenas uma vez
+
   return (
     <LanguageProvider>
       <div className="Cellphone">
@@ -82,6 +93,32 @@ function App() {
         <div className="leftButton"></div>
 
         <div className="App">
+          <AnimatePresence>
+            {isVisible && (
+              <motion.div
+                className="initialPage"
+                initial={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+              >
+                <motion.div
+                  className="logoInitialPage"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 1, duration: 1 }}
+                >
+                  <h1>LOGO</h1>
+                  <motion.p
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 2, duration: 1 }}
+                  >
+                    FabriciOS
+                  </motion.p>
+                </motion.div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+
           <div className="topPart">
             <Clock size={18} /> {/* Alterar Formatao de SIZE */}
             <p className="language">AAA</p>

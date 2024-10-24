@@ -53,7 +53,7 @@
 }
 
 .nav ul li {
-  border: 2px solid aqua;
+  border: 2px solid var(--debug-blue);
   cursor: pointer;
   font-family: 'Barlow Condensed', sans-serif;
   text-transform: uppercase;

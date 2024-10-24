@@ -13,15 +13,7 @@
 }
 
 .leftButton {
-  height: 100px;
-  width: 10px;
-  background-color: black;
-  position: absolute;
-  left: -5px;
-  top: 20%;
-  border-radius: 1rem;
-
-  border: 1px solid var(--debug-red);
+  display: none;
 }
 
 @keyframes vibrate {
@@ -162,14 +154,15 @@
 @media (min-width: 600px) and (max-height: 900px) {
   .Cellphone {
     background-color: rgb(0, 0, 0);
-    border-radius: 1.5rem;
+    border-radius: 3.3rem;
     padding: .8rem;
+    border: 0.25rem solid #c5c5c5;
   }
 
   .App {
     width: 350px;
     height: 700px;
-    border-radius: 1.5rem;
+    border-radius: 2.8rem;
 
     color: blue;
 
@@ -183,13 +176,26 @@
     width: 150px;
     background-color: black;
     position: absolute;
-    top: 0;
+    top: 1.5rem;
     left: 50%;
     transform: translateX(-50%);
-    border-radius: 0 0 1rem 1rem;
+    border-radius: 1rem;
 
     border: 1px solid var(--debug-red);
     z-index: 1000;
+  }
+
+  .leftButton {
+    display: block;
+    height: 100px;
+    width: 10px;
+    background-color: black;
+    position: absolute;
+    left: -5px;
+    top: 20%;
+    border-radius: 1rem;
+  
+    border: 1px solid var(--debug-red);
   }
 }
 
@@ -200,13 +206,16 @@
   .Cellphone {
     padding: 0.8rem;
     background-color: rgb(0, 0, 0);
-    border-radius: 2rem;
+    border-radius: 3.3rem;
+    border: 0.25rem solid #c5c5c5;
+    overflow: hidden;
+
   }
 
   .App {
     width: 393px;
     height: 852px;
-    border-radius: 1.8rem;
+    border-radius: 2.8rem;
 
     color: green;
   }
@@ -217,13 +226,26 @@
     width: 150px;
     background-color: black;
     position: absolute;
-    top: 0;
+    top: 1.2rem;
     left: 50%;
     transform: translateX(-50%);
-    border-radius: 0 0 1rem 1rem;
+    border-radius: 1rem;
 
     border: 1px solid var(--debug-red);
     z-index: 1000;
+  }
+
+  .leftButton {
+    display: block;
+    height: 100px;
+    width: 10px;
+    background-color: #c5c5c5;
+    position: absolute;
+    left: -10px;
+    top: 20%;
+    border-radius: 1rem;
+  
+    border: 1px solid var(--debug-red);
   }
 }
 

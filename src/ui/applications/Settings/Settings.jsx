@@ -104,7 +104,7 @@ const Settings = ({
         </div>
       </div>
 
-      <h2 className={style.feedbackButton}>{t('feedback')}</h2>
+      <h2 className={style.feedbackButton} onClick={() => setOpenedApp('Contact')}>{t('feedback')}</h2>
 
       <SettingsModal
         isOpen={isModalOpen}
