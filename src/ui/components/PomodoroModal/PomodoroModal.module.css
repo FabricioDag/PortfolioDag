@@ -12,7 +12,7 @@
 }
 
 .modalWrapper {
-  border: 2px solid var(--debug-red);
+  /* border: 2px solid var(--debug-red); */
   border-radius: .8rem;
   background-color: white;
   color: black;
@@ -35,7 +35,7 @@
 }
 
 .modalTop{
-  border: 2px solid var(--debug-red);
+  /* border: 2px solid var(--debug-red); */
   display: flex;
   width: 100%;
   justify-content: space-between;

@@ -1,5 +1,5 @@
 .Header {
-  border: 2px solid var(--debug-red);
+  /* border: 2px solid var(--debug-red); */
 
   display: flex;
   align-items: center;
@@ -10,6 +10,12 @@
 .logo {
   width: 40px;
   height: 40px;
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+.logo:hover{
+  filter: drop-shadow(0px 0px 7px white);
 }
 
 .hr {
@@ -17,7 +23,7 @@
 }
 
 .hamburguerBtn {
-  /* background-color: red; */
+  background-color: transparent;
   z-index: 100;
 
   border: none;
@@ -53,7 +59,7 @@
 }
 
 .nav ul li {
-  border: 2px solid var(--debug-blue);
+  /* border: 2px solid var(--debug-blue); */
   cursor: pointer;
   font-family: 'Barlow Condensed', sans-serif;
   text-transform: uppercase;

@@ -1,5 +1,5 @@
 .Destination {
-  border: 4px solid var(--debug-yellow);
+  /* border: 4px solid var(--debug-yellow); */
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -35,12 +35,12 @@
   font-weight: lighter;
   color: #d0d6f9;
   line-height: 25px;
-  border: 2px solid var(--debug-red);
+  /* border: 2px solid var(--debug-red); */
   height: 90px;
 }
 
 .imageWrapper {
-  border: 2px solid var(--debug-yellow);
+  /* border: 2px solid var(--debug-yellow); */
 }
 
 .imagePh {
@@ -51,7 +51,7 @@
 }
 
 .Nav {
-  border: 2px solid var(--debug-red);
+  /* border: 2px solid var(--debug-red); */
   /* width: 100%; */
 }
 
@@ -59,11 +59,11 @@
   display: flex;
   list-style: none;
   gap: 1rem;
-  border: 2px solid var(--debug-yellow);
+  /* border: 2px solid var(--debug-yellow); */
 }
 
 .Nav ul li {
-  border: 1px solid var(--debug-blue);
+  /* border: 1px solid var(--debug-blue); */
   text-transform: uppercase;
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 0.9rem;
@@ -76,7 +76,7 @@
 
 .avgDistance,
 .estTravelTime {
-  border: 2px solid var(--debug-red);
+  /* border: 2px solid var(--debug-red); */
   display: flex;
   flex-direction: column;
   gap: 0.5rem;

@@ -28,12 +28,12 @@
   font-weight: lighter;
   color: #d0d6f9;
   line-height: 25px;
-  border: 2px solid var(--debug-red);
+  /* border: 2px solid var(--debug-red); */
   /* height: 120px; */
 }
 
 .dotWrapper {
-  border: 2px solid var(--debug-green);
+  /* border: 2px solid var(--debug-green); */
   display: flex;
   gap: 1rem;
 }
@@ -60,7 +60,7 @@
   height: 250px;
   width: 250px;
 
-  border: 2px solid var(--debug-pink);
+  /* border: 2px solid var(--debug-pink); */
 }
 
 .imagePh img {
@@ -68,5 +68,5 @@
 }
 
 .crewTitleWrapper {
-  border: 2px solid var(--debug-yellow);
+  /* border: 2px solid var(--debug-yellow); */
 }

@@ -1,5 +1,5 @@
 .About {
-  border: 5px solid var(--debug-yellow);
+  /* border: 5px solid var(--debug-yellow); */
 }
 
 .placeholderVideo {
@@ -9,10 +9,10 @@
 }
 
 .textArea {
-  border: 1px solid var(--debug-yellow);
+  /* border: 1px solid var(--debug-yellow); */
   padding: 1rem;
 }
 
 .mainText {
-  border: 1px solid var(--debug-yellow);
+  /* border: 1px solid var(--debug-yellow); */
 }

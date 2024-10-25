@@ -1,5 +1,5 @@
 .Settings {
-    border: 7px solid var(--debug-green);
+    /* border: 7px solid var(--debug-green); */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -8,14 +8,14 @@
   }
   
   .settingsWrapper {
-    border: 2px solid var(--debug-red);
+    /* border: 2px solid var(--debug-red); */
     display: flex;
     flex-direction: column;
     gap: 1rem;
   }
   
   .settingOption {
-    border: 2px solid var(--debug-green);
+    /* border: 2px solid var(--debug-green); */
     padding: 1rem;
     cursor: pointer;
   }

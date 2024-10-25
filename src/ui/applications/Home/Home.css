@@ -1,5 +1,7 @@
 .home {
-  border: 5px solid var(--debug-green);
+  font-family: "Montserrat", sans-serif;
+
+  /* border: 5px solid var(--debug-green); */
   display: flex;
   flex-direction: column;
 
@@ -24,21 +26,21 @@
 }
 
 .weatherContainer {
-  border: 2px solid var(--debug-pink);
+  /* border: 2px solid var(--debug-pink); */
   display: grid;
   place-content: center;
   padding: 1rem;
 }
 
 .clockContainer {
-  border: 2px solid var(--debug-pink);
+  /* border: 2px solid var(--debug-pink); */
   display: grid;
   place-content: center;
   padding: 1rem;
 }
 
 .notificationContainer {
-  border: 2px solid var(--debug-red);
+  /* border: 2px solid var(--debug-red); */
   padding: 1rem;
 }
 
@@ -74,6 +76,41 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+
+.appWrapper {
+  /* border: 2px solid var(--debug-red); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.appWrapper a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.appWrapper.disabled{
+  opacity: 60%;
+}
+
+
+.appIcon:hover {
+  transform: translateY(4px);
+  filter: none;
+}
+
+
+.appTitle {
+  color: var(--app-title);
 }
 
 
