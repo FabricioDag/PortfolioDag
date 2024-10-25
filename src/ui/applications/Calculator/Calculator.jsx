@@ -10,7 +10,6 @@ const Calculator = () => {
   const [value1, setValue1] = useState(''); // Armazena o primeiro número
   const [value2, setValue2] = useState(''); // Armazena o segundo número
   const [operator, setOperator] = useState(''); // Armazena o operador
-  const [dot, setDot]= useState(false)
 
   const [mainValue, setMainValue] = useState('0');
 
@@ -23,21 +22,20 @@ const Calculator = () => {
       setOnReset(false);
     }
 
-    if (mainValue == '0') {
+    if (mainValue == '0' && value!='.') {
       setMainValue(value);
-    } else {
-      if(mainValue<=9999999){
+    } 
 
-        if(value==='.' && !dot){
-          setMainValue(mainValue + value);
-          setDot(true)
-        }
-       
-      }else{
-        alert('Limite de Dígitos Atingidos')
-      }
-      
+    if (mainValue == '.' && mainValue.includes('.')){
+      alert('Apenas um ponto')
     }
+
+    if(mainValue<99999){
+      setMainValue(mainValue + value)
+    } else{
+      alert('Limite de digitos atingido')
+    }
+
   };
 
   // Função para lidar com operadores //e realizar cálculo automático se aplicável

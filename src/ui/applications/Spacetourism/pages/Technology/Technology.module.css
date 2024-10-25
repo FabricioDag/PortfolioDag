@@ -7,6 +7,9 @@
   text-align: center;
   /* justify-content: space-between; */
   gap: 1rem;
+  padding: 2rem 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 .Technology h2 {
@@ -32,7 +35,7 @@
 }
 
 .wrapperBtns {
-  border: 2px solid green;
+  /* border: 2px solid green; */
   display: flex;
   align-items: center;
   justify-content: center;

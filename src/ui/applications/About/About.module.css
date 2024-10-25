@@ -1,16 +1,42 @@
 .About {
   /* border: 5px solid var(--debug-yellow); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  
 }
 
-.placeholderVideo {
-  width: 100%;
-  height: 250px;
-  background-color: black;
+.aboutHeader{
+  transform: translateY(-2.5rem);
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  line-height: 1.5rem;
+
+  background: rgb(2,0,36);
+  background: linear-gradient(0deg, #131B39 0%, #131B39 95%, rgba(255, 255, 255, 0) 100%);
+}
+
+.aboutHeader h1{
+  font-weight: 900;
+}
+
+.aboutHeader h2{
+  font-weight: 100;
+}
+
+.aboutPicture{
+  background-image: url(./teste.jfif);
+  height: 200px;
+  width:200px;
+  border-radius: 50%;
+  border: 2px solid white;
 }
 
 .textArea {
-  /* border: 1px solid var(--debug-yellow); */
-  padding: 1rem;
+  /* border: 1px solid red; */
+   padding: 1rem;
 }
 
 .mainText {

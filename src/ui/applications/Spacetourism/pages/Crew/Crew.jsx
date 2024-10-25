@@ -19,7 +19,7 @@ const Crew = () => {
   return (
     <div className={style.Crew}>
       <h2>
-        <span>02</span>
+        <span>02 </span>
         Meet your Crew
       </h2>
 
