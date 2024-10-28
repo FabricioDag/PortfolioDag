@@ -72,3 +72,15 @@ form{
   color: white;
   border: 2px solid white;
 }
+
+.sentWrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.sentWrapper span{
+  font-size: 2rem;
+}

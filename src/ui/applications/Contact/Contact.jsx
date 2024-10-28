@@ -35,10 +35,10 @@ const Contact = () => {
 
       <div className={style.mainText}>
         {/* <h2>Contact</h2> */}
-        <p>Got <strong>feedback</strong>?</p>
-        <p>Spotted a <strong>bug</strong>?</p>
-        <p>Just want to <strong>get in touch</strong>?</p>
-        <p>Send me a <strong>message</strong>!</p>
+        <p>{t('got')} <strong>feedback</strong>?</p>
+        <p>{t('spotted')} <strong>bug</strong>?</p>
+        <p>{t('justWantTo')}<strong> {t('getInTouch')}</strong>?</p>
+        <p>{t('sendMeA')} <strong>{t('message')}</strong>!</p>
       </div>
       <div className={style.wrapperContact}>
         {/* <h1>Dev Fabrício Dag</h1>
@@ -47,7 +47,7 @@ const Contact = () => {
         {!sent?(
           <form ref={form} onSubmit={sendEmail}>
             <div className={style.inputWrapper}>
-              <label>Name</label>
+              <label>{t('nameForm')}</label>
               <input type="text" name="user_name" placeholder='ex. Fabrício DAgostini' />
             </div>
             
@@ -57,7 +57,7 @@ const Contact = () => {
             </div>
 
             <div className={style.inputWrapper}>
-              <label>Message</label>
+              <label>{t('message')}</label>
               <textarea name="message" />
             </div>
                        
@@ -65,7 +65,9 @@ const Contact = () => {
         </form>
         ):
         (
-          <h1>enviado</h1>
+          <div className={style.sentWrapper}>
+            <span>{t('messageDelivered')}</span>
+          </div>
         )}
       </div>
     </div>

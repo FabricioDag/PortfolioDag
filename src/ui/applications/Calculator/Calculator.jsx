@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import style from './Calculator.module.css';
 import { add, subtract, multiply, divide } from './operations.js';
 
@@ -11,23 +11,30 @@ const Calculator = () => {
   const [value2, setValue2] = useState(''); // Armazena o segundo número
   const [operator, setOperator] = useState(''); // Armazena o operador
 
+  const [hasDot, setHasDot] = useState(false)
+
   const [mainValue, setMainValue] = useState('0');
 
   const [onReset, setOnReset] = useState(false);
 
+
   // Função para capturar o input no main value
   const handleInput = (value) => {
+    
+
     if (onReset) {
       clearAll();
       setOnReset(false);
+      setHasDot(false)
     }
 
     if (mainValue == '0' && value!='.') {
       setMainValue(value);
+      return
     } 
 
-    if (mainValue == '.' && mainValue.includes('.')){
-      alert('Apenas um ponto')
+    if(value == '.'){
+      setHasDot(true)
     }
 
     if(mainValue<99999){
@@ -40,6 +47,7 @@ const Calculator = () => {
 
   // Função para lidar com operadores //e realizar cálculo automático se aplicável
   const handleOperator = (newOperator) => {
+    setHasDot(false)
     if (operator == '') {
       // se nunca clicou em operador
       setValue1(mainValue); // manda o main value para value1 // inclusive 0
@@ -99,6 +107,8 @@ const Calculator = () => {
     setValue2('');
     setOperator('');
     resetMainValue();
+    setHasDot(false)
+    setOnReset(false)
   };
 
   const del = () => {
@@ -151,7 +161,7 @@ const Calculator = () => {
           {/* ------------ Linha 5 -------------- */}
           <button onClick={() => alert('Upgrade Calculator Soon')}>UP</button>
           <button onClick={() => handleInput('0')}>0</button>
-          <button onClick={() => handleInput('.')}>.</button>
+          <button disabled={hasDot} onClick={() => handleInput('.')}>.</button>
           <button onClick={() => handleEquals()}>=</button>
         </div>
 

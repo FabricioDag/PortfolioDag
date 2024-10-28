@@ -99,3 +99,11 @@
   text-transform: uppercase;
   font-family: 'Bellefair', serif;
 }
+
+@media (min-height:700px) {
+  .Destination {
+   
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+}

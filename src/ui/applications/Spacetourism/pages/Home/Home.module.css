@@ -38,7 +38,13 @@
   line-height: 1.5rem;
 }
 
-.exploreBtn {
+
+.exploreBtnWrapper {
+  position: relative;
+  border: 1px solid black;
+}
+
+.exploreButton {
   width: 150px;
   height: 150px;
   background-color: white;
@@ -49,4 +55,22 @@
   cursor: pointer;
   position: relative;
   border: none;
+  z-index: 100;
+  display: grid;
+  place-content: center;
+  color: black;
+}
+
+.expand {
+  background-color: rgba(255, 255, 255, 0.425);
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
+  transition: 0.2s ease;
+}
+
+.exploreButtonWrapper:hover .expand {
+  transform: scale(1.33);
 }

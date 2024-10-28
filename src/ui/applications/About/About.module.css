@@ -41,4 +41,6 @@
 
 .mainText {
   /* border: 1px solid var(--debug-yellow); */
+  font-family: "Poppins", serif;
+  text-align: justify;
 }

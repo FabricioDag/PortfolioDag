@@ -3,10 +3,13 @@ import './Carousel.css';
 
 import dataApps from './homedata.json';
 
+import fabriciOS from '../../../assets/fabriciOS.png'
+
 import { Notification, Clock } from '../../components';
 
-import { useState, useRef, useContext } from 'react';
+import { useState, useRef, useContext, useEffect } from 'react';
 import { LanguageContext } from '../../contexts/LanguageContext/LanguageContext';
+import { div } from 'framer-motion/client';
 
 const Home = ({ setOpenedApp }) => {
   const { t, setLanguage } = useContext(LanguageContext); // nao precisa de setLanguage?
@@ -21,6 +24,16 @@ const Home = ({ setOpenedApp }) => {
   const carouselRef = useRef(null);
 
   const [blockOpenApp, setblockOpenApp] = useState(false);
+
+  const [showNotification, setShowNotification] = useState(false)
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowNotification(true);
+    }, 7500); // Simula espera por uma notificação
+  
+    return () => clearTimeout(timer); 
+  }, []); // depender de um chamado de api no futuro
 
   const handleClick = (value) => {
     //validação para nao estar movendo a tela quando clica
@@ -135,7 +148,28 @@ const Home = ({ setOpenedApp }) => {
             </div>
 
             <div className="notificationContainer w3 h2 ph">
-              <Notification />
+              
+              {/* ----- Placeholder pro sistema de notificaçoes ----------- */}
+              {showNotification?(
+                <div className={`notification`}>
+                  <p className='notificationCall'>{t('notificationCall')} </p>
+                  <p className='notificationMessage'>{t('notificationMessage')}</p>
+                  {/* <small>Notificação 19:20h</small> */}
+                  <button
+                    className='notificationButton'
+                    onClick={()=>setShowNotification(false)}
+                  >
+                    {t('notificationConfirm')}
+                  </button>
+                </div>
+              ):
+              (
+                <div className='noNotification'>
+                  <img src={fabriciOS} alt="" />
+                  <p>Sem notificações</p>
+                </div>
+              )}
+
             </div>
 
             <div

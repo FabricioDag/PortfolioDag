@@ -1,6 +1,7 @@
 import style from './Home.module.css';
 
-const Home = () => {
+const Home = ({setOpenedPage}) => {
+
   return (
     <div className={style.Home}>
       <div className={style.textWrapper}>
@@ -14,7 +15,11 @@ const Home = () => {
         </p>
       </div>
 
-      <button className={style.exploreBtn}>Explore</button>
+      
+      <div className={style.exploreButtonWrapper}>
+        <div className={style.expand}></div>
+        <div onClick={()=>setOpenedPage('Destinations')} className={style.exploreButton}>Explore</div>
+      </div>
     </div>
   );
 };

@@ -6,16 +6,16 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Header } from './components';
 import { Home, Destinations, Crew, Technology } from './pages';
 
-const pages = {
-  Home: <Home />,
-  Destinations: <Destinations />,
-  Crew: <Crew />,
-  Technology: <Technology />,
-};
-
-const Spacetourism = () => {
+  const Spacetourism = () => {
   const [openedPage, setOpenedPage] = useState('Home');
   const [isVisible, setIsVisible] = useState(true);
+
+  const pages = {
+    Home: <Home setOpenedPage={setOpenedPage}/>,
+    Destinations: <Destinations />,
+    Crew: <Crew />,
+    Technology: <Technology />,
+  };
 
   useEffect(() => {
     const timer = setTimeout(() => {

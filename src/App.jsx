@@ -91,9 +91,19 @@ function App() {
     return () => clearTimeout(timer); // Limpeza do timer quando o componente for desmontado
   }, []); // Sem dependências para rodar apenas uma vez
 
+  const [showNotification, setShowNotification] = useState(false)
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowNotification(true);
+    }, 7500); // Simula espera por uma notificação -- vinculado com o shake no home.jsx (temporário)
+  
+    return () => clearTimeout(timer); 
+  }, []); 
+
   return (
     <LanguageProvider>
-      <div className="Cellphone">
+      <div className={`Cellphone ${showNotification?'shake':''}`}>
         <div className="cameraArea"></div>
         <div className="leftButton"></div>
 
@@ -126,7 +136,7 @@ function App() {
 
           <div className="topPart">
             <Clock size={18} /> {/* Alterar Formatao de SIZE */}
-            <p className="language">AAA</p>
+            <p className="language">100%</p>
           </div>
 
           {apps[openedApp]}

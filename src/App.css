@@ -10,6 +10,10 @@
   /* infinite */
 }
 
+.Cellphone.shake{
+  animation: vibrate 0.3s 3;
+}
+
 .cameraArea {
   display: none;
 }
