@@ -30,10 +30,10 @@ const Home = ({ setOpenedApp }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowNotification(true);
-    }, 7500); // Simula espera por uma notificação
+    }, 7500); // Simula espera por uma notificação -- vinculado com o shake no app.jsx (temporário)
   
     return () => clearTimeout(timer); 
-  }, []); // depender de um chamado de api no futuro
+  }, []); // depender de um chamado de api no futuro 
 
   const handleClick = (value) => {
     //validação para nao estar movendo a tela quando clica
@@ -684,7 +684,7 @@ const Home = ({ setOpenedApp }) => {
           </div>
 
           <div className="appWrapper">
-            <a href="/Resume.pdf" download="Resume.pdf" draggable="false">
+            <a href="https://apipdf-l4gu.onrender.com/files/meu-arquivo.pdf" target='_blank' download="FabricioDagostiniCV.pdf" draggable="false">
               <div className="appIcon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
