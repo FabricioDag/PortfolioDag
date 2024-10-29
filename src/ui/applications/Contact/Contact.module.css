@@ -84,3 +84,7 @@ form{
 .sentWrapper span{
   font-size: 2rem;
 }
+
+.messageLabel{
+  text-transform: capitalize;
+}

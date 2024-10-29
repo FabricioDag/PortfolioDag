@@ -3,12 +3,15 @@ import './Carousel.css';
 
 import dataApps from './homedata.json';
 
+import { motion, AnimatePresence } from 'framer-motion';
+
 import fabriciOS from '../../../assets/fabriciOS.png'
 
 import { Notification, Clock } from '../../components';
 
 import { useState, useRef, useContext, useEffect } from 'react';
 import { LanguageContext } from '../../contexts/LanguageContext/LanguageContext';
+
 import { div } from 'framer-motion/client';
 
 const Home = ({ setOpenedApp }) => {
@@ -140,7 +143,7 @@ const Home = ({ setOpenedApp }) => {
               ) : (
                 <div>no block drag</div>
               )} */}
-              20° Chuva
+              20° {t('cloudy')}
             </div>
 
             <div className="clockContainer w2 h1">
@@ -150,8 +153,14 @@ const Home = ({ setOpenedApp }) => {
             <div className="notificationContainer w3 h2 ph">
               
               {/* ----- Placeholder pro sistema de notificaçoes ----------- */}
+              <AnimatePresence>
               {showNotification?(
-                <div className={`notification`}>
+                <motion.div 
+                  className={`notification`}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 1, duration: 1 }}
+                  >
                   <p className='notificationCall'>{t('notificationCall')} </p>
                   <p className='notificationMessage'>{t('notificationMessage')}</p>
                   {/* <small>Notificação 19:20h</small> */}
@@ -161,15 +170,15 @@ const Home = ({ setOpenedApp }) => {
                   >
                     {t('notificationConfirm')}
                   </button>
-                </div>
+                </motion.div>
               ):
               (
-                <div className='noNotification'>
-                  <img src={fabriciOS} alt="" />
-                  <p>Sem notificações</p>
+                <div className='noNotification' draggable="false">
+                  <img draggable="false" src={fabriciOS} alt="" />
+                  <p>{t('noNotification')}</p>
                 </div>
               )}
-
+              </AnimatePresence>
             </div>
 
             <div
@@ -633,7 +642,7 @@ const Home = ({ setOpenedApp }) => {
           </div>
 
           <div className="carrouselSlide">
-            <div className="pageTitle h1 w3">Em breve!</div>
+            <div className="pageTitle h1 w3">{t('soon')}</div>
             {/* ESTA AQUI ATÉ RESOLVER O NUMERO DE PAGINAÇÃO */}
           </div>
         </div>

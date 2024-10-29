@@ -6,6 +6,7 @@ const translations = {
       'Glad you here. This website was made to show you a little more about me as a programer. Feel free to explore my projects, skills and the technologies i work with ',
     notification: 'Notification',
     notificationConfirm: 'I got it!',
+    noNotification:'No notifications',
     watch: 'Watch',
     calculator: 'Calculator',
     settings: 'Settings',
@@ -20,7 +21,7 @@ const translations = {
     getInTouch:'get in touch',
     sendMeA:'Send me a',
     message:'message',
-    nameForm:'name',
+    nameForm:'Name',
     messageDelivered:'Message delivered!',
 
     underDevelopment: 'Page under development',
@@ -42,6 +43,10 @@ const translations = {
     cyclesToLongBreak:'Cycles to long break',
     apply:'Apply',
     time:'Time (Minutes)',
+    soon:'Soon',
+    rainy:'Rainy',
+    cloudy:'Cloudy',
+    sunny:'Sunny'
   },
   pt: {
     acronym: 'pt-br',
@@ -51,6 +56,7 @@ const translations = {
       'Fico feliz por você estar aqui. Este website foi criado para que você possa conhecer um pouco mais sobre mim como programador. Sinta-se à vontade para explorar meus projetos, habilidades e as tecnologias com as quais trabalho ',
     notification: 'Notificação',
     notificationConfirm: 'Entendi!',
+    noNotification:'Sem notificações',
     watch: 'Relógio',
     calculator: 'Calculadora',
     settings: 'Configurações',
@@ -69,7 +75,7 @@ const translations = {
     messageDelivered:'Mensagem Enviada!',
     underDevelopment: 'Página em desenvolvimento',
     resumee: 'Curriculo',
-    competencies: 'Competencias',
+    competencies: 'Competências',
     projects: 'Projetos',
     background: 'Plano de fundo',
     backgroundClean: 'Liso',
@@ -86,6 +92,10 @@ const translations = {
     cyclesToLongBreak:'Ciclos até Pausa Longa',
     apply:'Aplicar',
     time:'Tempo (Minutos)',
+    soon:'Em breve!',
+    rainy:'Chuvoso',
+    cloudy:'Nublado',
+    sunny:'Ensolarado'
   },
   es: {
     acronym: 'es',
@@ -93,6 +103,7 @@ const translations = {
     notificationMessage: '',
     notification: '',
     notificationConfirm: '',
+    noNotification:'No notifications',
     watch: 'Reloj',
     calculator: 'Calculadora',
     settings: 'Ajustes',
@@ -128,6 +139,10 @@ const translations = {
     cyclesToLongBreak:'Cycles to long break',
     apply:'Aplicar',
     time:'Tiempo (Minutes)',
+    soon:'Soon',
+    rainy:'Rainy',
+    cloudy:'Cloudy',
+    sunny:'Sunny'
   },
 };
 

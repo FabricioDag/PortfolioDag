@@ -57,7 +57,7 @@ const Contact = () => {
             </div>
 
             <div className={style.inputWrapper}>
-              <label>{t('message')}</label>
+              <label className={style.messageLabel}>{t('message')}</label>
               <textarea name="message" />
             </div>
                        

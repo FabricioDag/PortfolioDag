@@ -105,7 +105,7 @@ function App() {
     <LanguageProvider>
       <div className={`Cellphone ${showNotification?'shake':''}`}>
         <div className="cameraArea"></div>
-        <div className="leftButton"></div>
+        {/* <div className="leftButton"></div> */}
 
         <div className="App">
           <AnimatePresence>
