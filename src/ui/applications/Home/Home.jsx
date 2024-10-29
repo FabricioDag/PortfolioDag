@@ -112,6 +112,19 @@ const Home = ({ setOpenedApp }) => {
     setCurrentIndex(i);
   };
 
+  const handleDownload = () =>{
+    // URL do endpoint da API onde o PDF está hospedado
+    const fileUrl = 'https://apipdf-l4gu.onrender.com/files/meu-arquivo.pdf';
+
+    // Cria um elemento <a> temporário para forçar o download do arquivo
+    const link = document.createElement('a');
+    link.href = fileUrl;
+    link.setAttribute('download', 'FabricioDag.pdf'); // nome do arquivo baixado
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link); // remove o elemento após o clique
+  }
+
   return (
     <div
       className="home application"

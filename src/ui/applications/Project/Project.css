@@ -33,7 +33,7 @@
 }
 
 .linksWrapper {
-  border: 2px solid red;
+  /* border: 2px solid red; */
   width: 100%;
   display: flex;
   align-items: center;
@@ -56,4 +56,33 @@
   border-radius: 50%;
   border: none;
   background-color: var(--bg-project-button);
+}
+
+.react{
+  background-color: #62dafb;
+}
+
+.node{
+  background-color: #7cd016;
+}
+
+.express{
+  background-color: black;
+}
+
+.css{
+  background-color: #274de0;
+}
+
+.html{
+  background-color: #e54b27;
+}
+
+.mongoDB{
+  background-color: 
+  #479142;
+}
+
+.git{
+  background-color: #f24e32;
 }
