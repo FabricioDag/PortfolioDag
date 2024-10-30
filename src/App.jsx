@@ -96,7 +96,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowNotification(true);
-    }, 7500); // Simula espera por uma notificação -- vinculado com o shake no home.jsx (temporário)
+    }, 5000); // Simula espera por uma notificação -- vinculado com o shake no home.jsx (temporário)
   
     return () => clearTimeout(timer); 
   }, []); 
@@ -116,12 +116,13 @@ function App() {
                 exit={{ opacity: 0 }}
               >
                 <motion.div
+                  draggable="false"
                   className="logoInitialPage"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 1, duration: 1 }}
                 >
-                  <img src={fabriciOS} alt="" />
+                  <img  draggable="false" src={fabriciOS} alt="" />
                   <motion.p
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}

@@ -33,7 +33,7 @@ const Home = ({ setOpenedApp }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowNotification(true);
-    }, 7500); // Simula espera por uma notificação -- vinculado com o shake no app.jsx (temporário)
+    }, 5000); // Simula espera por uma notificação -- vinculado com o shake no app.jsx (temporário)
   
     return () => clearTimeout(timer); 
   }, []); // depender de um chamado de api no futuro 
@@ -170,9 +170,9 @@ const Home = ({ setOpenedApp }) => {
               {showNotification?(
                 <motion.div 
                   className={`notification`}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 1, duration: 1 }}
+                  initial={{ opacity: 0,scale:0 }}
+                  animate={{ opacity: 1, scale:1 }}
+                  transition={{ delay: .2, duration: .2 }}
                   >
                   <p className='notificationCall'>{t('notificationCall')} </p>
                   <p className='notificationMessage'>{t('notificationMessage')}</p>
