@@ -24,8 +24,6 @@
 
   --bg-contact-header: #4310ae;
 
-  --bg-fixed-apps:#4a1fc04d;
-
   --debug-red: transparent;
   --debug-yellow: transparent;
   --debug-blue: transparent;
@@ -59,8 +57,6 @@
 
   --app-icon: #fff;
   --app-title: #fff;
-
-  --bg-fixed-apps:rgb(0, 0, 0);
 }
 
 [data-theme='Light'] {
@@ -76,9 +72,7 @@
   --bg-modal: #b6b6b6;
 
   --app-icon: rgb(119, 119, 119);
-  --app-title: #000000;
-
-  --bg-fixed-apps:rgb(255, 255, 255);
+  --app-title: #fff;
 }
 
 body,

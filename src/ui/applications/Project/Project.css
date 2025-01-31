@@ -6,30 +6,49 @@
   gap: 1rem;
 }
 
+.Project h1{
+  text-align: center;
+}
+
+.Project p{
+  text-align: justify;
+}
+
 .projectImage {
   width: 100%;
   height: 200px;
+  background-image: url("./image.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
   background-color: rgb(255, 255, 255);
   border-radius: 1rem;
 }
 
-.tagsArea {
+.tag-container {
+  /* background-color: #6b46c1; */
+  color: white;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid white;
 }
 
-.tagsWrapper {
+.tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.7rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 8px;
+  /* outline:2px solid red */
 }
 
 .tag {
-  padding: 0.5rem 3rem;
-  background-color: red;
-  border-radius: 1.5rem;
+  padding: .5rem 1.4rem;
+  border-radius: 1rem;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  display: inline-block;
 }
 
 .linksWrapper {
@@ -47,7 +66,22 @@
   border-radius: 2rem;
   border: none;
   color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  letter-spacing: .1rem;
+  cursor: pointer;
+  transition: .2s ease;
 }
+
+.websiteButton:hover{
+  letter-spacing: .2rem;
+}
+
+.githubButton{
+  color: white;
+}
+
+
 
 .figmaButton,
 .githubButton {
@@ -56,33 +90,40 @@
   border-radius: 50%;
   border: none;
   background-color: var(--bg-project-button);
+  cursor: pointer;
+  transition: .2s ease;
 }
 
-.react{
-  background-color: #62dafb;
+.githubButton:hover{
+  background-color: white;
+
 }
 
-.node{
-  background-color: #7cd016;
+.githubButton:hover .icon{
+  color: black;
 }
 
-.express{
-  background-color: black;
+.githubButton .icon{
+  color: white;
+  width: 100%;
+  height: 100%;
 }
 
-.css{
-  background-color: #274de0;
+.figmaButton{
+  display: grid;
+  place-content: center;
 }
 
-.html{
-  background-color: #e54b27;
+.figmaButton .icon{
+  color: white;
+  width: 60%;
+  height: 60%;
 }
 
-.mongoDB{
-  background-color: 
-  #479142;
+.figmaButton:hover{
+  background-color: white;
 }
 
-.git{
-  background-color: #f24e32;
+.figmaButton:hover .icon{
+  color: black;
 }
